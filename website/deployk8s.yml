@@ -1,1 +1,48 @@
-
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: apache-test-deployment
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      role: app
+  template: 
+    metadata:
+      labels:
+        role: app
+    spec:
+      containers:
+      - name: myapache
+        image: kingmoh/myphp:latest
+        ports:
+          - name: http
+            containerPort: 80
+            
+          
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: apache-clusterip
+spec:
+  type: ClusterIP
+  selector:
+    role: app
+  ports:
+    - port: 80
+      targetPort: 80
+      
+      
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: apache-nodeport
+spec:
+  type: NodePort
+  selector:
+    role: app
+  ports:
+    - port: 80
+      targetPort: 80
