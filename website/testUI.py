@@ -7,7 +7,7 @@ from selenium.webdriver.firefox.options import Options
 
 class EdurekaOrg(unittest.TestCase):
   
-    def setUp(self)
+    def setUp(self):
         options = Options();
         options.headless = True;
         self.driver = webdriver.Firefox(options=options, executable_path="/usr/local/bin/geckodriver");
