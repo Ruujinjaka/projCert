@@ -4,13 +4,12 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.firefox.options import Options
 
-options = Options();
-options.headless = True;
 
- 
 class EdurekaOrg(unittest.TestCase):
   
-    def setUp(self):
+    def setUp(self)
+        options = Options();
+        options.headless = True;
         self.driver = webdriver.Firefox(options=options, executable_path="/usr/local/bin/geckodriver");
  
     def test_search_title(self):
