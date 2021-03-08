@@ -10,7 +10,7 @@ chromeOptions.headless = True;
 class EdurekaOrg(unittest.TestCase):
   
     def setUp(self):
-        self.driver = webdriver.Chrome(executable_path="./drivers/chromedriver");
+        self.driver = webdriver.Chrome(executable_path="./drivers/chromedriver", options=chromeOptions);
  
     def test_search_title(self):
         driver = self.driver
