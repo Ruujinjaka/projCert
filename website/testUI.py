@@ -4,13 +4,11 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 
-chromeOptions = Options()
-chromeOptions.headless = True;
  
 class EdurekaOrg(unittest.TestCase):
   
     def setUp(self):
-        self.driver = webdriver.Chrome(executable_path="./drivers/chromedriver", options=chromeOptions);
+        self.driver = webdriver.Chrome(executable_path="./drivers/chromedriver");
  
     def test_search_title(self):
         driver = self.driver
