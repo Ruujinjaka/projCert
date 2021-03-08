@@ -8,4 +8,4 @@
         dest: /tmp/deployk8s.yml
         
     - name: update deployment
-      command: kubectl apply -f deployk8s.yml
+      command: kubectl apply -f /tmp/deployk8s.yml
