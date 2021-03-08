@@ -2,5 +2,10 @@
   hosts: "{{ env }}"
   become: yes
   tasks:
+    - name: copy deployment config
+      copy:
+        src: ./deployk8s.yml
+        dest: /tmp/deployk8s.yml
+        
     - name: update deployment
       command: kubectl apply -f deployk8s.yml
