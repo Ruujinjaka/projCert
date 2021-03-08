@@ -1,0 +1,6 @@
+- name: QA
+  hosts: {{ env }}
+  become: yes
+  tasks:
+    - name: update deployment
+      command: kubectl apply -f deployk8s.yml
