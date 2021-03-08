@@ -7,7 +7,7 @@ from selenium.webdriver.chrome.options import Options
 chromeOptions = Options()
 chromeOptions.headless = True;
  
-class EdurekaOrg(unittest.TestCase):'
+class EdurekaOrg(unittest.TestCase):
   
     def setUp(self):
         self.driver = webdriver.Chrome(executable_path="./drivers/chromedriver");
