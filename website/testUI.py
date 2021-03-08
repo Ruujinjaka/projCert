@@ -8,7 +8,7 @@ from selenium.webdriver.chrome.options import Options
 class EdurekaOrg(unittest.TestCase):
   
     def setUp(self):
-        self.driver = webdriver.Chrome(executable_path="./drivers/chromedriver");
+        self.driver = webdriver.Chrome(executable_path="/var/lib/jenkins/workspace/Build-image/website/drivers/chromedriver");
  
     def test_search_title(self):
         driver = self.driver
